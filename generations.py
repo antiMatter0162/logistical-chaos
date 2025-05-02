@@ -1,11 +1,11 @@
 def evaluate_one_generation(params, population):
-    dt = 0.01
+    dt = 0.1
     """
     Evaluate one generation of the population.
     :param params: The parameters for the evaluation.
     :return: The evaluated generation.
     """
-    new_population = params['Population Growth Rate'] * (params['Carrying Capacity'] - population) * dt
+    new_population = population + params['Population Growth Rate'] * (params['Carrying Capacity'] - population) * dt
     return new_population
 
 def evaluate_population(params, population):
