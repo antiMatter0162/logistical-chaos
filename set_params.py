@@ -22,8 +22,8 @@ def setparameters():
     if init_population <= 0:
         print("Initial population must be a positive integer. Defaulting to 1000.")
         init_population = 1000
-    if carrying_capacity <= 0 or carrying_capacity < init_population:
-        print("Carrying capacity must be a positive integer greater than initial population. Defaulting to 5000.")
+    if carrying_capacity <= 0:
+        print("Carrying capacity must be a positive integer. Defaulting to 5000.")
         carrying_capacity = 5000
     if pop_growth_rate <= 0:
         print("Population growth rate must be a positive number. Defaulting to 0.1.")

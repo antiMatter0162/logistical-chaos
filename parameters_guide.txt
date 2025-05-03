@@ -34,3 +34,13 @@ Growth Rate: 2.7
 
 This simulates a population that reproduces too fast for its own good and experiences
 a massive crash to zero after it cannot sustain itself.
+
+3. The Line
+
+Initial population: 100
+Carring capacity: 100
+Growth rate: any
+
+This illustrates a limitation of the model. In the real world, there would still be reproduction
+and fluctuation even when the carrying capacity is exactly reached, though implementing this in
+the model would inherently make it non-deterministic.

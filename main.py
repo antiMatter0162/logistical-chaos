@@ -3,7 +3,7 @@ import generations
 import graph_results
 import matplotlib.pyplot as plt
 
-tutorial = input("Welcome to the Population Growth Simulation! Would you like to see a tutorial? (y/n): ").strip().lower()
+tutorial = input("\n Welcome to the Population Growth Simulation! Would you like to see a tutorial?  (y/n): ").strip().lower()
 if tutorial == 'y':
     print("\nThis simulation models the growth of a population over time.")
     print("You will be prompted to enter the following parameters:")
@@ -18,7 +18,7 @@ if tutorial == 'y':
     print("Population growth rate: 0.1")
     print("After entering or defaulting parameters, the simulation will run and display the results in a separate window.\n")
 
-mode_selection = input("Do you want dark or light mode? (d/l): ").strip().lower()
+mode_selection = input("\n Do you want dark or light mode? (d/l): ").strip().lower()
 if mode_selection == 'd':
     plt.style.use('dark_background')
 params = set_params.setparameters()
