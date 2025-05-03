@@ -16,6 +16,15 @@ def setparameters():
     except ValueError:
         print("Invalid input. Please enter integers for number of generations and initial population.")
         return None
+    if num_gens <= 0:
+        print("Number of generations must be a positive integer. Defaulting to 100.")
+        num_gens = 100
+    if init_population <= 0:
+        print("Initial population must be a positive integer. Defaulting to 1000.")
+        init_population = 1000
+    if carrying_capacity <= 0 or carrying_capacity < init_population:
+        print("Carrying capacity must be a positive integer greater than initial population. Defaulting to 5000.")
+        carrying_capacity = 5000
     if pop_growth_rate <= 0:
         print("Population growth rate must be a positive number. Defaulting to 0.1.")
         pop_growth_rate = 0.1

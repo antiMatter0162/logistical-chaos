@@ -21,6 +21,5 @@ def evaluate_population(params, population):
         if population < 0:
             print("Population has gone extinct.")
             break
-        print(round(population))
     return population_data , generation_number
     # Return the population data for all generations

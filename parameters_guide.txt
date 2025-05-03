@@ -1,0 +1,36 @@
+As a general rule of thumb, lower growth rate values tend to look more like traditional 
+logistic growth than chaotic growth. Values below approximately 1.7 also tend to settle
+into a bit of a steady state due to rounding of population numbers to integers, but chaotic
+oscillations in this regime can be created with a large enough population. 
+
+100 generations is reccomended for neater graphs that capture adequate behavior. If not
+specified, the number of generations in the scenarios below is 100.
+
+Fun parameters you can try out:
+
+1. Logistic growth
+
+Initial Population: 1000
+Carrying Capacity: 100000
+Growth Rate: 0.2
+
+This generates what is essentially the classical logistic growth graph.
+
+3. Chaotic growth
+
+Initial population: 10000
+Carrying capacity: 1000000
+Groth Rate: 1.75
+
+This is quintessential chaotic growth. It obviously has some order and periodicity, yet
+examining the graph closer reveals that it never exactly repeats itself.
+
+2. Population crash
+
+Number of generations: 10
+Initial Population: 10000
+Carrying Capacity: 30000
+Growth Rate: 2.7
+
+This simulates a population that reproduces too fast for its own good and experiences
+a massive crash to zero after it cannot sustain itself.
