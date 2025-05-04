@@ -9,7 +9,7 @@ if tutorial == 'y':
     print("You will be prompted to enter the following parameters:")
     print("1. Number of generations: The total number of generations to simulate. This must be a positive integer.")
     print("2. Initial population: The size of the population at the start of the simulation. This must be a positive integer.")
-    print("3. Carrying capacity: The maximum population size that the environment can sustain. This must be an integer greater than the initial population.")
+    print("3. Carrying capacity: The maximum population size that the environment can sustain. This must be an integer and is reccomended to be greater than the initial population.")
     print("4. Population growth rate: The rate at which the population grows. It can be any positive number and may have decimals.")
     print("If you enter invalid values, the program will default to the following:")
     print("Number of generations: 100")
@@ -21,6 +21,24 @@ if tutorial == 'y':
 mode_selection = input("\n Do you want dark or light mode? (d/l): ").strip().lower()
 if mode_selection == 'd':
     plt.style.use('dark_background')
+elif mode_selection == 'l':
+    plt.style.use('default')
+else:
+    print("Invalid selection. Defaulting to light mode.")
+    plt.style.use('default')
+
 params = set_params.setparameters()
+save = input("\n (Not reccomended for large numbers of populations) Would you like to print the results to the console? (y/n): ").strip().lower()
+if save == 'y':
+    popultion_data, generation_number = generations.evaluate_population(params, params['Initial Population'])
+    print("\nPopulation data:")
+    for i in range(len(popultion_data)):
+        print(f"Generation {generation_number[i]}: Population {popultion_data[i]}")
+elif  save == 'n':
+    print("Results will not be printed to the console.")
+else:
+    print("Invalid selection. Defaulting to not printing results to the console.")
+
 graph_results.graph_data(params)
+print("\nSimulation complete. Thank you for using the Population Growth Simulation.")
 exit(0)
