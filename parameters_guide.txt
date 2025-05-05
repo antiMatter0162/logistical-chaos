@@ -52,8 +52,20 @@ the model would inherently make it non-deterministic.
 
 Number of generations: 15
 Initial population: 999
-Carrying Capacity 30000
+Carrying Capacity 1000
 Growth Rate: 2.7
 
 This is a population that destabilizes itself, creating larger and larger oscillations from the carrying
 capacity until the population crashes to zero. 
+
+6. Sensitive dependence on initial conditions
+
+This one involves comparing two trials:
+
+Initial population: 1000
+Carrying Capacity: 1000000
+Growth Rate: 1.7
+
+Initial population: 1000
+Carrying Capacity: 1000000
+Growth Rate: 1.71
