@@ -3,7 +3,7 @@ import generations
 import graph_results
 import matplotlib.pyplot as plt
 
-tutorial = input("\n Welcome to the Population Growth Simulation! Would you like to see a tutorial?  (y/n): ").strip().lower()
+tutorial = input("\nWelcome to the Population Growth Simulation! Would you like to see a tutorial?  (y/n): ").strip().lower()
 if tutorial == 'y':
     print("\nThis simulation models the growth of a population over time.")
     print("You will be prompted to enter the following parameters:")
@@ -18,7 +18,7 @@ if tutorial == 'y':
     print("Population growth rate: 0.1")
     print("After entering or defaulting parameters, the simulation will run and display the results in a separate window.\n")
 
-mode_selection = input("\n Do you want dark or light mode? (d/l): ").strip().lower()
+mode_selection = input("\nDo you want dark or light mode? (d/l): ").strip().lower()
 if mode_selection == 'd':
     plt.style.use('dark_background')
 elif mode_selection == 'l':
@@ -27,6 +27,17 @@ else:
     print("Invalid selection. Defaulting to light mode.")
     plt.style.use('default')
 
+include_carrying_capacity = input("\nWould you like to include the carrying capacity in the graph? (y/n): ").strip().lower()
+if include_carrying_capacity == 'y':
+    print("\nThe carrying capacity will be included in the graph.")
+    include_carrying_capacity = True
+elif include_carrying_capacity == 'n':
+    print("\nThe carrying capacity will not be included in the graph.")
+    include_carrying_capacity = False
+else:
+    print("Invalid selection. Defaulting to not including the carrying capacity in the graph.")
+    include_carrying_capacity = False
+    
 params = set_params.setparameters()
 save = input("\n (Not reccomended for large numbers of populations) Would you like to print the results to the console? (y/n): ").strip().lower()
 if save == 'y':
@@ -39,6 +50,6 @@ elif  save == 'n':
 else:
     print("Invalid selection. Defaulting to not printing results to the console.")
 
-graph_results.graph_data(params)
+graph_results.graph_data(params,include_carrying_capacity)
 print("\nSimulation complete. Thank you for using the Population Growth Simulation.")
 exit(0)

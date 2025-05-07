@@ -3,7 +3,7 @@ def setparameters():
     Set parameters for the simulation.
     """
     # Simulation parameters
-    num_gens = input("Enter the number of generations: ")
+    num_gens = input("\nEnter the number of generations: ")
     init_population = input("Enter the initial population: ")
     carrying_capacity = input("Enter the carrying capacity of the environment: ")
     pop_growth_rate = input("Enter the population growth rate: ")
