@@ -17,7 +17,6 @@ def evaluate_population(params, population):
         # Evaluate the population for the current generation
         generation_number.append(i+1)
         population = evaluate_one_generation(params, population)
-        print(population)
         population_data.append(round(population))
         if population < 0:
             print("Population has gone extinct.")

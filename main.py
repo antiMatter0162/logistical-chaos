@@ -39,7 +39,7 @@ else:
     include_carrying_capacity = False
     
 params = set_params.setparameters()
-save = input("\n (Not reccomended for large numbers of populations) Would you like to print the results to the console? (y/n): ").strip().lower()
+save = input("\n(Not reccomended for large numbers of populations) Would you like to print the results to the console? (y/n): ").strip().lower()
 if save == 'y':
     popultion_data, generation_number = generations.evaluate_population(params, params['Initial Population'])
     print("\nPopulation data:")
@@ -49,7 +49,6 @@ elif  save == 'n':
     print("Results will not be printed to the console.")
 else:
     print("Invalid selection. Defaulting to not printing results to the console.")
-
 graph_results.graph_data(params,include_carrying_capacity)
 print("\nSimulation complete. Thank you for using the Population Growth Simulation.")
 exit(0)
