@@ -45,7 +45,7 @@ else:
     include_carrying_capacity = False
     
 params = set_params.setparameters()
-save = input("\n(Not reccomended for large numbers of populations) Would you like to print the results to the console? (y/n): ").strip().lower()
+save = input("\n(Not recommended for large numbers of populations) Would you like to print the results to the console? (y/n): ").strip().lower()
 if save == 'y':
     population_data, generation_number = generations.evaluate_population(params, params['Initial Population'])
     print("\nPopulation data:")
