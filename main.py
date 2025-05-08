@@ -56,5 +56,5 @@ elif  save == 'n':
 else:
     print("Invalid selection. Defaulting to not printing results to the console.")
 graph_results.graph_data(params,include_carrying_capacity)
-print("\nSimulation complete. Thank you for using the Population Growth Simulation.")
+print("\nSimulation complete. Thank you for using the Population Growth Simulation.\n")
 exit(0)
