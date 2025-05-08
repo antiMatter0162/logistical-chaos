@@ -69,3 +69,13 @@ Growth Rate: 1.7
 Initial population: 1000
 Carrying Capacity: 1000000
 Growth Rate: 1.71
+
+7. Island of Stability
+
+Initial poulation: 1000
+Carrying Capacity: 10000000
+Growth Rate: 1.9
+
+This shows surprising degrees of order and periodicity not expected of a growth rate this high. Trying a
+growth rate just 0.1 lower or higher creates wildly different behavior. It just shows how the program has 
+many hidden surpises that can be discovered with trial and error.
