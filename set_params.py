@@ -14,8 +14,13 @@ def setparameters():
         carrying_capacity = int(carrying_capacity)
         pop_growth_rate = float(pop_growth_rate)
     except ValueError:
-        print("Invalid input. Please enter integers for number of generations and initial population.")
-        return None
+        #Handle invalid input by setting default values
+        print("Invalid input. Please enter integers for number of generations and initial population, and float for growth rate.")
+        print("Defaulting to 100 generations, 1000 initial population, 5000 carrying capacity, and 0.1 growth rate.")
+        num_gens = 100
+        init_population = 1000
+        carrying_capacity = 5000
+        pop_growth_rate = 0.1
     if num_gens <= 0:
         print("Number of generations must be a positive integer. Defaulting to 100.")
         num_gens = 100

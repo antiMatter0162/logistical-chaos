@@ -18,11 +18,11 @@ if tutorial == 'y':
     print("Population growth rate: 0.1")
     print("After entering or defaulting parameters, the simulation will run and display the results in a separate window.\n")
 elif tutorial == 'n':
-    print("\nProceeding to parameter input.")
+    print("\nProceeding to customization.")
 else:
-    print("\nInvalid selection, proceeding to parameter input.")
+    print("\nInvalid selection, proceeding to customization.")
 
-mode_selection = input("\nDo you want dark or light mode? (d/l): ").strip().lower()
+mode_selection = input("\nWould you like a dark or light mode graph? (d/l): ").strip().lower()
 if mode_selection == 'd':
     print("\nDark mode selected.")
     plt.style.use('dark_background')
