@@ -16,7 +16,7 @@ def graph_data(params, include_carrying_capacity):
             for i in range(len(generation_number)):
                 carrying_capacity_list.append(params["Carrying Capacity"])
             plt.plot(generation_number, carrying_capacity_list, 'r--', label='Carrying Capacity')
-        plt.legend()
+            plt.legend()
         plt.xlabel('Generation Number')
         plt.ylabel('Population Size')
         plt.title('Population Growth Over Generations')

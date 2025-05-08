@@ -17,14 +17,20 @@ if tutorial == 'y':
     print("Carrying capacity: 5000")
     print("Population growth rate: 0.1")
     print("After entering or defaulting parameters, the simulation will run and display the results in a separate window.\n")
+elif tutorial == 'n':
+    print("\nProceeding to parameter input.")
+else:
+    print("\nInvalid selection, proceeding to parameter input.")
 
 mode_selection = input("\nDo you want dark or light mode? (d/l): ").strip().lower()
 if mode_selection == 'd':
+    print("\nDark mode selected.")
     plt.style.use('dark_background')
 elif mode_selection == 'l':
+    print("\nLight mode selected.")
     plt.style.use('default')
 else:
-    print("Invalid selection. Defaulting to light mode.")
+    print("\nInvalid selection. Defaulting to light mode.")
     plt.style.use('default')
 
 include_carrying_capacity = input("\nWould you like to include the carrying capacity in the graph? (y/n): ").strip().lower()
@@ -35,16 +41,16 @@ elif include_carrying_capacity == 'n':
     print("\nThe carrying capacity will not be included in the graph.")
     include_carrying_capacity = False
 else:
-    print("Invalid selection. Defaulting to not including the carrying capacity in the graph.")
+    print("\nInvalid selection. Defaulting to not including the carrying capacity in the graph.")
     include_carrying_capacity = False
     
 params = set_params.setparameters()
 save = input("\n(Not reccomended for large numbers of populations) Would you like to print the results to the console? (y/n): ").strip().lower()
 if save == 'y':
-    popultion_data, generation_number = generations.evaluate_population(params, params['Initial Population'])
+    population_data, generation_number = generations.evaluate_population(params, params['Initial Population'])
     print("\nPopulation data:")
-    for i in range(len(popultion_data)):
-        print(f"Generation {generation_number[i]}: Population {popultion_data[i]}")
+    for i in range(len(population_data)):
+        print(f"Generation {generation_number[i]}: Population {population_data[i]}")
 elif  save == 'n':
     print("Results will not be printed to the console.")
 else:
