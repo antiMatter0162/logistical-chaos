@@ -44,7 +44,7 @@ elif include_carrying_capacity == 'n':
     debug = False
 elif include_carrying_capacity == 'schrodingercat':
     print("\nDebug mode activated. Errors are to be expected.")
-    include_carrying_capacity = True
+    include_carrying_capacity = False
     debug = True
 else:
     print("\nInvalid selection. Defaulting to not including the carrying capacity in the graph.")
