@@ -5,10 +5,10 @@ def evaluate_one_generation(params, population):
     :param params: The parameters for the evaluation.
     :return: The evaluated generation.
     """
-    new_population = population + population * params['Population Growth Rate'] * (params['Carrying Capacity'] - population)/params['Carrying Capacity'] * dt
+    new_population = population + abs(population) * params['Population Growth Rate'] * (params['Carrying Capacity'] - population)/params['Carrying Capacity'] * dt
     return new_population
 
-def evaluate_population(params, population):
+def evaluate_population(params, population,debug):
     population_data = [params["Initial Population"]]
     population = params["Initial Population"]
     generation_number = [0]
@@ -18,7 +18,7 @@ def evaluate_population(params, population):
         generation_number.append(i+1)
         population = evaluate_one_generation(params, population)
         population_data.append(round(population))
-        if population < 0:
+        if population < 0 and debug is False:
             print("Population has gone extinct.")
             break
     return population_data , generation_number

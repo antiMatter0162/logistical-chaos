@@ -37,17 +37,24 @@ include_carrying_capacity = input("\nWould you like to include the carrying capa
 if include_carrying_capacity == 'y':
     print("\nThe carrying capacity will be included in the graph.")
     include_carrying_capacity = True
+    debug = False
 elif include_carrying_capacity == 'n':
     print("\nThe carrying capacity will not be included in the graph.")
     include_carrying_capacity = False
+    debug = False
+elif include_carrying_capacity == 'schrodingercat':
+    print("\nDebug mode activated. Errors are to be expected.")
+    include_carrying_capacity = True
+    debug = True
 else:
     print("\nInvalid selection. Defaulting to not including the carrying capacity in the graph.")
     include_carrying_capacity = False
+    debug = False
     
 params = set_params.setparameters()
 save = input("\n(Not recommended for large numbers of populations) Would you like to print the results to the console? (y/n): ").strip().lower()
 if save == 'y':
-    population_data, generation_number = generations.evaluate_population(params, params['Initial Population'])
+    population_data, generation_number = generations.evaluate_population(params, params['Initial Population'], debug)
     print("\nPopulation data:")
     for i in range(len(population_data)):
         print(f"Generation {generation_number[i]}: Population {population_data[i]}")
@@ -55,6 +62,6 @@ elif  save == 'n':
     print("Results will not be printed to the console.")
 else:
     print("Invalid selection. Defaulting to not printing results to the console.")
-graph_results.graph_data(params,include_carrying_capacity)
+graph_results.graph_data(params,include_carrying_capacity,debug)
 print("\nSimulation complete. Thank you for using the Population Growth Simulation.\n")
 exit(0)

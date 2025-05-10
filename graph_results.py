@@ -1,10 +1,10 @@
 import generations
 import matplotlib.pyplot as plt
 
-def graph_data(params, include_carrying_capacity):
+def graph_data(params, include_carrying_capacity, debug):
     if params is not None:
         # Evaluate the population
-        population_data, generation_number = generations.evaluate_population(params, params['Initial Population'])
+        population_data, generation_number = generations.evaluate_population(params, params['Initial Population'],debug)
 
         # Plot the results
         fig = plt.figure(figsize=(10, 6))
