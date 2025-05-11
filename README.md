@@ -1,4 +1,4 @@
-# chaos-simulation
+# logistical-chaos
 
 This is a deterministic mathematic model for population growth (and also coincidentally
 the first real coding project the author has undertaken). It takes the assumptions of
