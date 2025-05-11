@@ -54,7 +54,7 @@ else:
 params = set_params.setparameters()
 save = input("\n(Not recommended for large numbers of populations) Would you like to print the results to the console? (y/n): ").strip().lower()
 if save == 'y':
-    population_data, generation_number = generations.evaluate_population(params, params['Initial Population'], debug)
+    population_data, generation_number = generations.evaluate_population(params, debug)
     print("\nPopulation data:")
     for i in range(len(population_data)):
         print(f"Generation {generation_number[i]}: Population {population_data[i]}")

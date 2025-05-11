@@ -8,7 +8,7 @@ def evaluate_one_generation(params, population):
     new_population = population + abs(population) * params['Population Growth Rate'] * (params['Carrying Capacity'] - population)/params['Carrying Capacity'] * dt
     return new_population
 
-def evaluate_population(params, population,debug):
+def evaluate_population(params,debug):
     population_data = [params["Initial Population"]]
     population = params["Initial Population"]
     generation_number = [0]

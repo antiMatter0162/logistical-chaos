@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 def graph_data(params, include_carrying_capacity, debug):
     if params is not None:
         # Evaluate the population
-        population_data, generation_number = generations.evaluate_population(params, params['Initial Population'],debug)
-
+        population_data, generation_number = generations.evaluate_population(params,debug)
         # Plot the results
         fig = plt.figure(figsize=(10, 6))
         plt.plot(generation_number, population_data)
