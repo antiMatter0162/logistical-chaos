@@ -21,5 +21,8 @@ def evaluate_population(params,debug):
         if population < 0 and debug is False:
             print("Population has gone extinct.")
             break
+        if population > 1e100:
+            print("Population has exploded. Terminating simulation to prevent overflow error.") 
+            break
     return population_data , generation_number
     # Return the population data for all generations
